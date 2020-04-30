@@ -1,0 +1,86 @@
+<!--//Módulo C - DOM
+    /*Dom== Document Object Model
+    Modelo de objetos para documentos
+    É um conjuntos de objetos dentro do navegador, que vai dar acesso a documentos internos ao site
+
+        ARVORE DOM:
+        window // tudo esta dentro dele, tem mais objetos
+        // Pra vc ver o que esta dentoro do window, digita window. e veja os comandos
+        location    documenent           history
+        url e site  documento atual     onde vc estava e tals
+
+        dentro de document vc tem html
+        dentro de html vc tem head e body
+
+        dentro de head :
+        meta, tile
+
+        body:
+        h1, p,e as coisas que vc escrever
+         
+         quem ta embaixo é child e quem tá encima na arvore e parent
+    
+    aos coisas da arvore sao os elementos. Voce pode viajar pelos elemntos do site, selecionando eles
+    São 5 metodos:
+    por Marca - getElementsByTagName() - vc seleciona mais de 1 objeto
+    voce coloca o nome da tag ali dentr e depois faz um [] e coloca o numero do paragrfao que vc quer pegar
+    a contagem é igual de vetores (começa no 0 )
+    
+    por ID-     |
+    por Nome -  |->getelementesBy...
+    por Classe- |
+    por querySelector - "."== class  && "#"==class 
+    */
+-->
+
+<!DOCTYPE html><!-- // num.toLocaleString("pt-BR", {style:'currency', currency: 'BRL'}) - pra colocar em real -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Terceiro Código</title>
+    <style>
+        body{
+            font: normal 20pt Arial;
+            background-color:rgb(134, 72, 72);
+            color:white;
+            /* Em css, vc comenta assim*/      
+        }
+    </style>
+   
+</head>
+<body>
+    <h1>Iniciando os Estudos em DOM</h1>
+   <p>Começando a Estudar DOM</p>
+   <p>Muito legal</p>
+   <div id='msg'>Clique em mim !!</div>
+
+   <script>
+       var p1 = window.document.getElementsByTagName('p')[0]//Veja que vc usouo o get elements (no plural)
+       // Quando isso acontece, vc deve udsar o colchete
+       document.write(`O que estava na linha:` + p1.innerText)// Se eu usar innerText, ele pega só o texto
+       // Se eu usar innerHTML, ele vai pegar o texto e a formatação do negocio
+       p1.style.background = 'black'
+       p1.style.color= 'blue'
+       // Voce ve que eu posso mudar o conteudo do local original, mechendo na variavel
+       //Veja que com isos, eu posso mecher no site:
+       var p2=document.body // voce nao precisar usar quele comando de antes aq
+        p2.style.background='black'
+
+        var d=window.document.getElementById("msg")
+    
+        document.write("<br>"+d.innerText)// Pra pular linha escreva <br> entre os parentesesss
+        //Vce pode mudar o texto da div tbm
+        d.innerText = "Veja só que audacia"
+        //Pode tbm fazer isso cm o codigo todo:
+      //  window.document.getElementById('msg').innerText="Olha só"
+    
+/*Existe TBM uma nova forma ( mais recente) de fazer o supracitado, usando o   querySelector() ou querySelectorAll() 
+*/
+    var pre = window.document.querySelector('div#msg')// quando é class voce usar o " . ", quando é ID, voce usa " # "
+    // o class é tipó <div class='msg'> aí vc usa querySelector('div.msg')
+    document.write("<br>"+pre.innerText).background ='blue'
+    //pre.style.background= 'blue'
+    </script>
+</body>

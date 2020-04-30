@@ -1,0 +1,74 @@
+<!DOCTYPE html><!-- // num.toLocaleString("pt-BR", {style:'currency', currency: 'BRL'}) - pra colocar em real -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Terceiro Código</title>
+    <style>
+        body{
+            font: normal 20pt Arial;
+            background-color:rgb(134, 72, 72);
+            color:white;
+            /* Em css, vc comenta assim*/      
+        }
+    </style>
+   
+</head>
+<body>
+
+    <script>
+       // var nome = window.prompt("Qual é o seu nome?")
+            // Eu poderia ter usado let tbm ou o const
+            //por questao de escopo, eu uso o var
+            //como aquio é js, o comentário é assim ou 
+            /* assim */
+       // window.alert("É um grande prazer te conhecer, " +nome+"!")
+            /*O + pode ser concatenação (entre strings) ou soma (entre valores numericos)
+            Funções pra conversão:
+            Number.parseInt(n)
+            Number.parseFloat(n)
+            o i e o F sao maiusculo
+            */
+        // var n1= Number.parseInt(window.prompt("Digite um numero:"))
+       //var n2=Number.parseFloat(window.prompt("Digite um float:"))
+       //window.alert(n1+n2)
+    //Print em js é imprimir shuaeahe
+    //lecione algo e ABRA (o 9) o parenteses, aí a coisa já vai estar entre parentestes
+    //Eu posso utilizar Number (n) e o js deicde o que é o que 
+
+    /*Conversao de numero rpa String:
+        String(n)
+        n.toString()
+    */
+   /* Nova maneira de mostrar dados:
+    `Estou parendendo ${s}` */
+    //${} é chamdo de placeholder
+        //window.alert(`Estou parendendo ${n1+n2}`)
+    // È craze (o de cima do telcado)
+    /*Outras coisas importantes ao se  usar Strings:
+    s.length (é um atributo, nome é ele)
+    s.toUperCase()(tudo maiuscula)
+    s.toLowerCase()(Tudo minusicula)
+    document.write("tipo o printf")
+    */
+    var nome =(window.prompt("Digte o seu nome")) // Não esquece de escrever o var 
+    document.write(`Olá ${nome}!!!<br/>`)
+    document.write(`Seu nome tem aaaaaaaaaaaaaaaaaaaaaaa <strong>${nome.length}</strong> letras.`)
+    document.write(`Seu nome em letras msiculas: ${nome.toUpperCase()}<br>`)
+    document.write(`Seu nome em letra minuscula: ${nome.toLowerCase()}`)
+    //Strong ==  Negrito 
+    //Ele printa aquilo /\ no site 
+    //Pra eu poder formatar aquilo, eu vou lá no Style e faço as modificaçoes
+    /*                          FORMATANDO NÚMEROS
+    num.toFixed(2) -  ele tem 2 casas depois da virgula
+    num.toFixed(2).replace(".",",") - Agora ele printa com , em vez de . 
+    */
+    var num= Number.parseFloat(window.prompt("Digite um float:"))
+    document.write(num.toLocaleString("pt-BR", {style:'currency', currency: 'BRL'}))
+    // aquilo ali noa muda o num de verdade
+    //Comando enorme pra poder colocar o salario de alguem:
+    // num.toLocaleString("pt-BR", {style:'currency', currency: 'BRL'})
+    //currency == dinheiro
+    </script>
+</body>

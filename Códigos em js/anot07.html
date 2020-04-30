@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teste</title>
+
+    <style>
+        div#area{/*Lembra que # é pra id*/
+        font: normal 20pt Arial;
+        background: rgb(42,139,42);
+        color: rgb(255, 254, 254);
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        text-align:center;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="area" ><!--   Veja depois de ler la embaixo-->
+     <!-- Veja também que ali vc deve escrever on antes (ONclick, ONmouseneter...)  -->
+     <!-- Pra não ficar poluido assim, eu posso pegar e fazer uma lista e de eventos - Tá la embaixo-->
+     <!--É a função AddEventListener("evento(sem o ON)", função (sem o "")
+        Voce faz no script  -->
+        Interaja...
+    </div>
+    <script>
+            //      EVENTOS EM DOM
+       /*  
+       Veja que acima eu criei uma div
+       Um evento é tudo aquilop que pode acontecer com aquela DIV
+       Um dos eventos mais comum é o mouse
+       comandos:
+       mouseenter: Ele só enmtra na div,s em clicar nem nada
+       mousemove: Ele so se move dentor da div
+       mousedown: Voce clica e segura no local
+       mouseup: voce solta o botao do mouse apos ficar segruando
+       click: só clica mesmo
+       mouseout: o mause sai
+
+       *TEM MUITOS MAIS EVENTOS*
+       pesquisa na net "java scrypt dom events list" que vc descobre
+       a pagina chama events reference
+       */
+        
+
+        /*  Pra tratar o evento::
+            * Funções :
+            é um conjunto de linhas que acontecem só quando um evento ocorre
+            escreve :
+            function ação(parametros){
+
+            }
+
+        */
+       // Eu to dentro do script
+       var a = window.document.getElementById('area')//Isso nao e bom, papo outr ahora
+       a.addEventListener("click", clicar)
+       a.addEventListener("mouseenter",entrar)
+       a.addEventListener("mouseout", sair)
+       function clicar(){//Veja que eu chamei a função la encima, dentro do <> da dib
+         
+          a.innerText = "Clicou!!!"
+          a.style.background="yellow"
+          a.style.color="black"
+       }
+       //Aquela variavel a é local, logo vc deve criar outra variavel a
+       function entrar(){
+            var a= window.document.getElementById("area")
+            a.innerText="O mouse entro"
+            a.style.background="red"
+       }
+        function sair(){
+            var a = window.document.getElementById("area")
+            a.innerText= "O mouse saiu"
+            a.style.background= "blue"
+        }   
+
+       //CASO DE UM ERRO, NADA VAI ACONTECER. 
+       //pRA VC RESOLVER O ERRO, VAI EM NO NAVEGADOR, NO INSPETOR
+       //AI LA VC VAI VER '1 ERRO E VC TIRA ELE
+
+       //VEJA O EXERCICIO EX01
+       </script>
+       <!-- A função vai ser feita dentro do script -->
+</body>
+</html>

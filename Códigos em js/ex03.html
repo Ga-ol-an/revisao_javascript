@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nacionalidade</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+    <h3>Digite a sua nacionalidade:
+    <input type="text" name="nac" id="nac">
+    <input type="button" name="bot" id="botid" value="Enviar" onclick="receita()">
+
+    <div id='res'>
+    </div>
+
+    <script>
+    function receita(){
+        var nac= window.document.getElementById("nac")
+        var res= window.document.getElementById("res")
+        
+        if (nac.value.toLowerCase() == 'brasil'){
+         //NÃO ESQUECE DE FECHAR OS PARENTESES ALI EM CIMA
+            res.innerHTML= "Vc é Brasileiro(a)"
+        }
+        else{
+            res.innerHTML="Vc é gringo(a) "
+        }
+    }
+    
+    </script>
+</body>
+
+</html>

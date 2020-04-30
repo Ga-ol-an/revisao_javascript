@@ -1,0 +1,86 @@
+<DOCTYPE html>
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Somando Númeors</title>
+
+    <style>
+        body{
+            background: rgba(51, 1, 1,0.8);
+            color: white;
+
+        }
+        div#res{
+            height: 200px;
+            width: 450px;
+            font: normal 30px Arial;
+            background:rgba(51,1,1,1);
+            text-align: center;
+            line-height: 180px;
+    
+        }
+        hr{
+            width: 450px;
+            margin-left: 0px;
+        
+        }
+        h1#sum{
+            margin-left:150px;
+
+        }
+        input{
+            font: normal 30px Arial;
+            text-align: center;
+        } 
+
+    </style>
+</head>
+<body>
+    <h1>Digite os 2 numeros para vc somar</h1>
+    <input type="number" name="txtn1" id="txtn1">
+    <h1 id="sum">+</h1>
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" id="somar" onclick="somar()">
+      <br>  <br><hr>  
+      <br>
+    <div id='frase'></div>
+    <div id='res'>Resultado
+    </div>
+
+    <script>   
+        
+        function somar(){
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementsByName("txtn2")[0]//olha o [0]
+            //Ali eu criei 2 variaveis e as conectei com os inputs criados
+            //como eu peguie os valores, eles sao sempre texto. Agora 
+            //eu vou passar eles para numeros
+            var n1= Number(tn1.value)//Esse .value me fala que eu quero o valor dali de dentro
+            // e nao o olocar ou o que tn1 é
+            var n2= Number(tn2.value)
+            //como eu pus so numer, ele decide qual vai ser (int ou float)
+           // document.write(n1+"e"+n2)
+            var s = n1+n2
+            var txt=window.document.getElementById("res")
+            var txt2=window.document.getElementById('frase')
+            txt.innerHTML = s
+            txt2.innerText="aaaaaaaaaaaaa"
+        }
+    
+    </script>
+    
+</body>
+</html>
+
+<!-- 
+    var num1 = Number.parseFloat(window.prompt("Digite o numero 1:"))
+        var num2 = Number.parseFloat(window.prompt("Digite o num2:"))
+
+        function somar(){
+
+        }
+    
+-->
